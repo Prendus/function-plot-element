@@ -1,0 +1,25 @@
+{
+  "name": "function-plot-element",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "test-window": "npm run link && electron --enable-logging node_modules/scram-engine/main.js --entry-file test/index.html --window",
+    "link": "npm link && npm link function-plot-element"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prendus/function-plot-element.git"
+  },
+  "author": "Jordan Last <jordan.michael.last@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Prendus/function-plot-element/issues"
+  },
+  "homepage": "https://github.com/Prendus/function-plot-element#readme",
+  "dependencies": {
+    "lit-html": "^0.7.1"
+  },
+  "devDependencies": {
+    "scram-engine": "^0.6.17"
+  }
+}
