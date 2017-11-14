@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Prendus/function-plot-element#readme",
   "dependencies": {
+    "d3": "^3.5.17",
+    "function-plot": "^1.18.1",
     "lit-html": "^0.7.1"
   },
   "devDependencies": {
