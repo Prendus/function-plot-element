@@ -6,6 +6,11 @@ declare var functionPlot: any;
 export class FunctionPlotElement extends HTMLElement {
     _data: any;
 
+    constructor() {
+        super();
+        this.attachShadow({mode: 'open'});
+    }
+
     static get observedAttributes() {
         return ['data'];
     }
@@ -35,10 +40,10 @@ export class FunctionPlotElement extends HTMLElement {
     render() {
         render(html`
             <div id="graph"></div>
-        `, this);
+        `, this.shadowRoot);
 
         functionPlot({
-            target: '#graph',
+            target: this.shadowRoot.querySelector('#graph'),
             data: this.data
         });
     }

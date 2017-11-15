@@ -7,6 +7,11 @@ FunctionPlotElement;
 class TestFunctionPlotElement extends HTMLElement {
     data: any;
 
+    constructor() {
+        super();
+        this.attachShadow({mode: 'open'});
+    }
+
     connectedCallback() {
         this.data = [{
             fn: 'x^4'
@@ -17,7 +22,7 @@ class TestFunctionPlotElement extends HTMLElement {
     render() {
         render(html`
             <function-plot data='[{"fn": "x^4"}, {"fn": "x^2"}]'></function-plot>
-        `, this);
+        `, this.shadowRoot);
     }
 }
 
