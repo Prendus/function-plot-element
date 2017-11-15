@@ -16,7 +16,7 @@ class TestFunctionPlotElement extends HTMLElement {
 
     render() {
         render(html`
-            <function-plot data=${this.data}></function-plot>
+            <function-plot data='[{"fn": "x^4"}, {"fn": "x^2"}]'></function-plot>
         `, this);
     }
 }

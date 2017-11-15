@@ -6,6 +6,19 @@ declare var functionPlot: any;
 export class FunctionPlotElement extends HTMLElement {
     _data: any;
 
+    static get observedAttributes() {
+        return ['data'];
+    }
+
+    attributeChangedCallback(attr, oldVal, newVal) {
+        switch (attr) {
+            case 'data': {
+                this.data = JSON.parse(newVal);
+                return;
+            }
+        }
+    }
+
     set data(val) {
         this._data = val;
         this.render();
